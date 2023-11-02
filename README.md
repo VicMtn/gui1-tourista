@@ -100,7 +100,7 @@ SRC :
 ![Capture d’écran 2023-09-28 à 10.52.12.png](GUI1%20ad3001472f3947d98c234f21b6220091/Capture_decran_2023-09-28_a_10.52.12.png)
 
 
-Fonctionnement du projet : 
+## Fonctionnement du projet : 
 
 CD dist/
 
