@@ -1,0 +1,482 @@
+//Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Martian+Mono:wght@300&display=swap');
+
+
+// Fonts Variables
+$primary: 'Martian Mono';
+$secondary: 'Lato';
+
+// Fonts Sizes
+$text: 1.2rem;
+$sub: 600;
+$big-text: 1.6rem;
+$title: 2rem;
+
+//Fonts Weights
+$light: 300;
+$regular: 400;
+$bold: 700;
+$extra-bold: 9;
+
+//Colors Variables
+$red: #D82E20;
+$activeRed: #a12318;
+$metallic: #A3ACB3;
+$white: #F0F2EF;
+$black: #0E1116; // maybe will use just "black"
+$grey: #545454;
+$light-grey: #d9d9d9;
+
+// Position Variables
+$padd-side: 2vh;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+
+}
+
+html,
+body {
+
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    font-family: $primary;
+    background-color: $white;
+}
+
+h2 {
+    font-family: $secondary;
+    font-weight: $sub;
+    font-size: $sub;
+    padding-bottom: 1dvh;
+    line-height: 28px;
+
+}
+
+h3 {
+    font-size: $text;
+
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: $padd-side;
+    padding-top: 0;
+}
+
+.banner-image {
+    position: relative;
+    background-position: fixed;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0,
+
+    }
+
+    &::before {
+        top: 0;
+        height: 100%;
+        background-image: url(/header.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &::after {
+        bottom: 0;
+        height: 100%;
+        background-image: url(/footer.svg);
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+    }
+}
+
+
+/* -------- Title style ------- */
+
+
+.title {
+    margin-top: 3dvh;
+    margin-bottom: 2dvh;
+    margin-left: 12dvh;
+    margin-right: 12dvh;
+    padding: 2dvh;
+    display: flex;
+    justify-content: center;
+    border-bottom-right-radius: 3dvh;
+    border-top-left-radius: 3dvh;
+    font-family: $primary;
+    font-size: $title;
+    background-color: $red;
+    text-align: center;
+}
+
+
+/* -------- title line style ------- */
+.line-title {
+    position: relative;
+    width: 30dvh;
+    padding-left: $padd-side;
+    margin-bottom: 1dvh;
+}
+
+.line-title::before,
+.line-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 1dvh;
+    border-radius: 2dvh;
+}
+
+.line-title::before {
+    width: 100%;
+    background: $light-grey;
+
+}
+
+.line-title::after {
+    width: 8dvh;
+    left: $padd-side;
+    background: $red;
+}
+
+/* -------- Swiper style ------- */
+
+.swiper {
+    height: 35dvh;
+    width: 100%;
+}
+
+/**
+/* element.style should not be modified but i can't find the error outside of this
+element.style {
+    transform: translate3d(0, 0, 0) !important;
+}
+/**/
+
+.swiper-wrapper {
+    height: 100% !important;
+    width: fit-content;
+    padding: $padd-side;
+}
+
+.swiper-slide {
+    height: auto !important;
+    width: fit-content !important;
+    max-width: 28dvh;
+    justify-content: center;
+    align-items: center;
+    background: $metallic;
+    border-radius: 2dvh;
+    padding: 2dvh;
+    width: 50%;
+    left: $padd-side;
+    overflow: hidden;
+}
+
+.swiper-slide-prev {
+    right: 0;
+}
+
+.swiper-slide-next {
+    left: 0;
+}
+
+.swiper-slide h3 {
+    font-family: $secondary;
+    font-size: $big-text;
+    font-weight: $bold;
+    color: #000000;
+    text-align: justify;
+    margin: 0;
+    padding: 0;
+
+    &::before {
+        content: "";
+        width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 30%;
+        z-index: -1;
+        top: 0;
+        background-image: linear-gradient(#fffcfc6e, #1c1b1b00);
+    }
+}
+
+.swiper-slide p {
+    margin-top: 18dvh !important;
+    background-color: #d9d9d970;
+    font-family: $secondary;
+    font-size: $text;
+    color: $black;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+.swiper-slide img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 2dvh;
+    overflow: hidden;
+}
+
+.swiper-slide :active {
+    background: $activeRed;
+}
+
+.second-title {
+    padding: $padd-side;
+    margin-right: 13dvh;
+    display: flex;
+    border-top-right-radius: 5dvh;
+    border-bottom-right-radius: 5dvh;
+    background-color: $red;
+
+}
+
+.guides {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: $padd-side;
+    padding-top: 0 !important;
+}
+
+.card-wrapper {
+    max-width: 50%;
+    padding: 0.4dvh;
+    background-color: $red;
+    margin-bottom: 2dvh;
+    box-shadow: 3px 3px 4px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 17dvh;
+    padding: 1dvh;
+    background-color: $light-grey;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    border-top-left-radius: 2dvh;
+    border-bottom-right-radius: 2dvh;
+
+}
+
+.card img {
+    margin-top: 1dvh;
+    border-radius: 50%;
+    width: 15dvh;
+    height: 15dvh;
+}
+
+.card-title {
+    font-family: $secondary;
+    font-size: $big-text;
+    color: $black;
+    text-align: center;
+    position: relative;
+}
+
+
+
+.card-sub {
+    font-family: $secondary;
+    font-size: $text;
+    text-align: center;
+}
+
+
+.card a {
+    color: black;
+
+}
+
+.icon-container {
+    margin-top: 2dvh;
+    margin-bottom: 1dvh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.icon-container i {
+    font-size: 1.3rem;
+    color: $black;
+    padding: 1dvh;
+
+}
+
+.booking-container {
+    background-color: $red;
+    margin: $padd-side;
+    margin-top: 0;
+    padding-left: 5dvh;
+    padding-right: 5dvh;
+    border-top-left-radius: 2dvh;
+    border-bottom-right-radius: 2dvh;
+}
+
+form {
+    padding: $padd-side;
+    width: 80%;
+}
+
+input {
+    width: 100%;
+
+}
+
+.booking-title {
+    padding-top: 2dvh;
+    font-family: $secondary;
+    font-size: $title;
+    color: $black;
+    text-align: center;
+    margin-bottom: 2dvh;
+}
+
+.booking-sub {
+    font-family: $secondary;
+    font-size: $text;
+    color: $black;
+    text-align: left;
+
+}
+
+button {
+    margin-top: 0.6dvh;
+    margin-bottom: 1.5dvh;
+    width: 100%;
+    height: 3dvh;
+    font-size: $text;
+    background: $light-grey;
+    color: $black;
+    border: none;
+}
+
+ul {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: #ccc;
+    transform-origin: top;
+    transform: perspective(1000px) rotateX(-90deg);
+    transition: 0.5s;
+}
+
+ul.active {
+    transform: perspective(1000px) rotateX(0deg);
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    background: #262626;
+    color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    transition: 0.5s;
+}
+
+
+/* -------- Sponsors style ------- */
+@mixin white-gradient {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+$animationSpeed: 20s;
+
+// Animation
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 7))
+    }
+}
+
+
+// Styling
+.slider {
+    background: white;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+    height: 5dvh;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    &::before,
+    &::after {
+        content: "";
+        background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 10%);
+        height: 100px;
+        position: absolute;
+        width: 200px;
+        z-index: 2;
+    }
+
+    &::after {
+        right: 0;
+        top: 0;
+        transform: rotateZ(180deg);
+    }
+
+    &::before {
+        left: 0;
+        top: 0;
+    }
+
+    .slide-track {
+        animation: scroll $animationSpeed linear infinite;
+        display: flex;
+        border-image-slice: 1500%;
+        width: calc(250px * 14);
+    }
+
+    .slide {
+        height: 5dvh;
+        width: 100%;
+    }
+}
+
+/* -------- Footer style ------- */
+
+.footer {
+    background-color: $light-grey;
+    font-size: 0.5rem;
+    padding: 0.5dvh;
+    text-align: center;
+}
