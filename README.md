@@ -98,3 +98,12 @@ SRC :
 [https://codepen.io/studiojvla/pen/qVbQqW](https://codepen.io/studiojvla/pen/qVbQqW)
 
 ![Capture d’écran 2023-09-28 à 10.52.12.png](GUI1%20ad3001472f3947d98c234f21b6220091/Capture_decran_2023-09-28_a_10.52.12.png)
+
+
+Fonctionnement du projet : 
+
+CD dist/
+
+npm run dev
+
+ouvrir le serveur et changez manuellement le lien des pages
